@@ -159,18 +159,13 @@
             </div>
             
 
-<form class="contact-bg" id="contact-form" name="contact" method="post" novalidate="novalidate">
+<form id="myForm" class="contact-bg" id="contact-form" name="contact" method="post" novalidate="novalidate">
                     <input id="1a" type="text" name="name" class="form-control" placeholder="Your Name" />
                     <input id="2a" type="email" name="email" class="form-control" placeholder="Your E-mail" />
                     <input id="3a" type="text" name="phone" class="form-control" placeholder="Phone Number" />
                     <textarea id="4a" name="message" class="form-control" placeholder="Your Message" style="height:120px"></textarea>
-                    <button id="submit" type="submit" name="submit" class="btn btn-glance">Send</button>
-                    <div id="success">
-                        <p class="green textcenter"> Your message was sent successfully! I will be in touch as soon as I can. </p>
-                    </div>
-                    <div id="error">
-                        <p> Something went wrong, try refreshing and submitting the form again. </p>
-                    </div>
+                    <button id="submit" onclick="myFunction()" type="submit" name="submit" class="btn btn-glance">Send</button>
+                    
                 </form>
 
 
@@ -198,11 +193,18 @@
 
     firebase.initializeApp(config);
 
+function myFunction() {
+  document.getElementById("myForm").reset();
+}
+        
+
     // Create a variable to reference the database.
     var database = firebase.database();
 
     $('button').on('click', function(){
+
         event.preventDefault();
+
         
         var nam = $('#1a').val();
         var em = $('#2a').val();
@@ -243,7 +245,7 @@
     <script src="js/custom.js"></script>
 
 
-    
+
 
 </body>
 
