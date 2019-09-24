@@ -164,7 +164,8 @@
                     <input id="2a" type="email" name="email" class="form-control" placeholder="Your E-mail" />
                     <input id="3a" type="text" name="phone" class="form-control" placeholder="Phone Number" />
                     <textarea id="4a" name="message" class="form-control" placeholder="Your Message" style="height:120px"></textarea>
-                    <button id="submit" onclick="myFunction()" type="submit" name="submit" class="btn btn-glance">Send</button>
+                    <button id="submit1" type="submit" name="submit" class="btn btn-glance" >Send</button>
+                    <button  id="reset" type="submit" name="submit" class="btn btn-glance" onclick="myFunction()" >Reset The Page</button>
                     
                 </form>
 
@@ -191,17 +192,19 @@
     appId: "1:231719994619:web:2b44cf728c48b1b0"
   };
 
-    firebase.initializeApp(config);
+    firebase.initializeApp(config);  
 
-function myFunction() {
+    function myFunction() {
   document.getElementById("myForm").reset();
-}
-        
+}      
 
     // Create a variable to reference the database.
     var database = firebase.database();
 
-    $('button').on('click', function(){
+    
+
+    $('#submit1').on('click', function(){
+        
 
         event.preventDefault();
 
