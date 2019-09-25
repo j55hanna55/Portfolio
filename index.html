@@ -455,9 +455,10 @@
     $('#77').on('click', function(){
 
         event.preventDefault();
-        
 
-        
+
+    
+
         var nam = $('#1a').val();
         var em = $('#2a').val();
         var su = $('#3a').val();
@@ -470,7 +471,13 @@
             message: me
 
         });
+
+         $('#1a').val("");
+         $('#2a').val("");
+         $('#3a').val("");
+         $('#4a').val("");
     });
+
 
 
 </script>
