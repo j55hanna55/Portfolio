@@ -246,7 +246,7 @@ cite {
 /* Home Slider */
 
 .slide-wrap{
-	
+	background-color: black;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -298,6 +298,15 @@ cite {
 	height: 2037px;
 }
 
+.carousel-fade .carousel-inner .item:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,.2);
+}
 
 .carousel-fade .carousel-inner .active {
 	opacity: 1;
