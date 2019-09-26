@@ -298,15 +298,6 @@ cite {
 	height: 2037px;
 }
 
-.carousel-fade .carousel-inner .item:after {
-  content: " ";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  
-}
 
 .carousel-fade .carousel-inner .active {
 	opacity: 1;
